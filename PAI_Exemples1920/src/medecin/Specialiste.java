@@ -1,6 +1,7 @@
 package medecin;
 
 public class Specialiste extends Generaliste {
+	@Override
 	public void operer() {
 		System.out.println("J'opère");
 	}
