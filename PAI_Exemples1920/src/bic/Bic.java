@@ -12,7 +12,7 @@ public class Bic extends SystemeEcriture {
 		// Appel le constructeur parent (Systeme Ecriture)
 		super(couleur, marque);
 		this.niveau = 10;
-		System.out.println("Création d'un Bic. Nb Systèmes d'écriture: " + getNbSystemeEcriture());
+		//System.out.println("Création d'un Bic. Nb Systèmes d'écriture: " + getNbSystemeEcriture());
 	}
 
 	@Override
@@ -27,5 +27,13 @@ public class Bic extends SystemeEcriture {
 		else
 			throw new Exception("Plus d'encre");
 	}
+
+	@Override
+	public String toString() {
+		
+		return "Création d'un Bic Niv: "+niveau+" "+super.toString();
+	}
+	
+	
 
 }

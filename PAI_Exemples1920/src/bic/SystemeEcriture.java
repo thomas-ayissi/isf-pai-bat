@@ -72,5 +72,16 @@ public abstract class SystemeEcriture {
 
 	protected abstract void diminueNiveau() throws Exception;
 
+	@Override
+	public String toString() {
+		return "Système écriture Marque: " + marque + " Coul: " + couleurCourante + " Etat: " + etat;
+	}
+
+	@Override
+	protected void finalize() throws Throwable {
+		nbSystemesEcriture--;
+	}
+	
+	
 
 }

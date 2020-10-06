@@ -41,4 +41,10 @@ public class Stylo extends SystemeEcriture {
 		}
 	}
 
+	@Override
+	public String toString() {
+		
+		return "Création d'un stylo Cartouche: "+cartouche+" "+super.toString();
+	}
+ 
 }
