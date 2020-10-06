@@ -8,9 +8,9 @@ package bic;
 public class Bic extends SystemeEcriture {
 	private int niveau;
 
-	public Bic( String couleur,String marque) {
+	public Bic(String couleur, String marque) {
 		// Appel le constructeur parent (Systeme Ecriture)
-		super(couleur,marque);
+		super(couleur, marque);
 		this.niveau = 10;
 		System.out.println("Création d'un Bic. Nb Systèmes d'écriture: " + getNbSystemeEcriture());
 	}
@@ -21,8 +21,11 @@ public class Bic extends SystemeEcriture {
 	}
 
 	@Override
-	protected void diminueNiveau() {
-		if (niveau>0) niveau--;
+	protected void diminueNiveau() throws Exception {
+		if (niveau > 0)
+			niveau--;
+		else
+			throw new Exception("Plus d'encre");
 	}
 
 }

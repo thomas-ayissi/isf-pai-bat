@@ -4,7 +4,7 @@ public abstract class SystemeEcriture {
 	private static int nbSystemesEcriture = 0;
 	private final String marque;
 	private boolean etat;
-	//Couleur courante
+	// Couleur courante
 	private String couleurCourante;
 
 	/**
@@ -24,7 +24,7 @@ public abstract class SystemeEcriture {
 	}
 
 	// Ecrire
-	public void ecrire() {
+	public void ecrire() throws Exception {
 		if (!etat)
 			System.out.println("Fermé");
 		else if (getNiveau() <= 0)
@@ -70,6 +70,7 @@ public abstract class SystemeEcriture {
 	// méthode abstraite ==> à redéfinir
 	public abstract int getNiveau();
 
-	protected abstract void diminueNiveau();
+	protected abstract void diminueNiveau() throws Exception;
+
 
 }
