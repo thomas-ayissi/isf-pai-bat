@@ -1,6 +1,13 @@
 package bic;
 
+/**
+ * 
+ * @author Didier
+ * @version 2 (méthode statique)
+ */
 public class Bic {
+	// Méthode statique
+	private static int nbSystemesEcriture = 0;
 	private final String couleur;
 	private int niveau;
 	private final String marque;
@@ -11,6 +18,8 @@ public class Bic {
 		this.marque = marque;
 		this.etat = false;
 		this.niveau = 10;
+		nbSystemesEcriture++;
+		System.out.println("Création d'un Bic. Nb Systèmes d'écriture: " + nbSystemesEcriture);
 	}
 
 	public void ecrire() {
@@ -48,6 +57,11 @@ public class Bic {
 	public void fermer() {
 		etat = false;
 		System.out.println("Etat Fermé");
+	}
+
+	// méthode statique
+	public static int getNbSystemeEcriture() {
+		return nbSystemesEcriture;
 	}
 
 }
